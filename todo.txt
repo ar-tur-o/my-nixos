@@ -1,0 +1,7 @@
+TODO:
+- port over the host configs
+- port over all home modules
+  - core GUI is obsolete
+  - some core CLI needs porting
+  - optional modules may just be copy-pasted as-is
+- port over user configs
