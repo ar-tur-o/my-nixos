@@ -67,7 +67,6 @@
           getHostModules = host: [
             ./hosts/${host.name}/configuration.nix
             (setupHmModule host)
-            ./hosts/common/core.nix
             ] 
             ++ map (user: ./users/${user}/user-def.nix) host.users;
           in
