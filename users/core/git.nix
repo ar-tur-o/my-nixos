@@ -1,7 +1,4 @@
-{
-  host,
-  ...
-}: {
+{host, ...}: {
   programs.git = {
     enable = true;
     userEmail = "salgadoarturo1219@gmail.com";

@@ -1,7 +1,11 @@
-{pkgs, lib, config, ...}: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   programs.steam.enable = true;
-  
+
   environment.systemPackages = with pkgs; [
     osu-lazer-bin
     sunshine

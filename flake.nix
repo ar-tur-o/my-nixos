@@ -22,6 +22,12 @@
 
     # Stylix
     stylix.url = "github:danth/stylix";
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # if you are not running an unstable channel of nixpkgs, select the corresponding channel of nixvim
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {self, ...} @ inputs: let
@@ -37,46 +43,50 @@
     nixosConfigurations = let
       hosts = import ./host-list.nix;
 
-      # this imports the HM module with all users in the host defined 
-      setupHmModule = host: inputs.home-manager.nixosModules.home-manager {
-        home-manager = {
-          extraSpecialArgs = { 
-            inherit inputs; 
-            inherit host; 
-          };
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          # this wad of code imports all the users in the users list
-          # and turns it into a attr set
-          users = builtins.listToAttrs (
-            builtins.map
+      # this imports the HM module with all users in the host defined
+      setupHmModule = host: [
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            extraSpecialArgs = {
+              inherit inputs;
+              inherit host;
+            };
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            # this wad of code imports all the users in the users list
+            # and turns it into a attr set
+            users = builtins.listToAttrs (
+              builtins.map
               (user: {
                 name = user;
                 value = import ./users/${user}/home.nix;
               })
-            ) host.users;
-        };
-      };
-
+              host.users
+            );
+          };
+        }
+      ];
     in
-    # this maps the host definition list into a host attrset
+      # this maps the host definition list into a host attrset
       builtins.listToAttrs (map (host: {
-        name = host.name;
-        value = let 
-          # import the host config, home-manager config, and user defs
-          getHostModules = host: [
-            ./hosts/${host.name}/configuration.nix
-            (setupHmModule host)
-            ] 
-            ++ map (user: ./users/${user}/user-def.nix) host.users;
+          name = host.name;
+          value = let
+            # import the host config, home-manager config, and user defs
+            getHostModules = host:
+              [
+                ./hosts/${host.name}/configuration.nix
+              ]
+              ++ (setupHmModule host)
+              ++ map (user: ./users/${user}/user-def.nix) host.users;
           in
             inputs.nixpkgs.lib.nixosSystem {
               specialArgs = {
                 inherit inputs;
                 inherit host;
               };
-            modules = getHostModules host;
-          };
+              modules = getHostModules host;
+            };
         })
         hosts);
   };

@@ -30,4 +30,3 @@
     cursor.name = "Bibata-Modern-Ice";
   };
 }
-

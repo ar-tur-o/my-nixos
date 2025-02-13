@@ -1,18 +1,22 @@
-{pkgs, host, lib, ...}: {
-
+{
+  pkgs,
+  host,
+  lib,
+  ...
+}: {
   # ========== MISC CONFIG ========== #
-  
+
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enables flakes :)
   services.xserver.enable = true;
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = [ pkgs.home-manager ];
+  environment.systemPackages = [pkgs.home-manager];
   home-manager.backupFileExtension = "backup";
 
   # ========== BOOT ========== #
 
   boot.loader.systemd-boot.enable = lib.mkDefault true;
   boot.loader.efi.canTouchEfiVariables = lib.mkDefault true;
-  
+
   # ========== HARDWARE ========== #
 
   # enables opengl
@@ -59,10 +63,10 @@
     pulse.enable = true;
     jack.enable = true;
   };
-  
+
   # adds support for yubikey
   services.udev.packages = [pkgs.libfido2];
-  
+
   # misc hardware
   hardware.opentabletdriver.enable = true;
   hardware.steam-hardware.enable = true;
