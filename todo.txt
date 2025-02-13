@@ -6,5 +6,5 @@ TODO:
   * core GUI is obsolete
   [x] some core CLI needs porting
   [x] optional modules may just be copy-pasted as-is
-[ ] try moving osu laser to user modules
+[x] try moving osu laser to user modules
 [x] port over user configs

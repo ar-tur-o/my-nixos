@@ -20,7 +20,7 @@
     polarity = "dark";
 
     opacity = {
-      terminal = 0.90;
+      terminal = 0.70;
       popups = 0.90;
     };
 
