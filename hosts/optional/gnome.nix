@@ -17,5 +17,7 @@
     gnome-contacts
     gnome-font-viewer
     gnome-weather
+    gnome-maps
+    gnome-tour
   ];
 }
