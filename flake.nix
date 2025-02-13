@@ -60,7 +60,13 @@
               builtins.map
               (user: {
                 name = user;
-                value = import ./users/${user}/home.nix;
+                value = let
+                  defaultPath = ./users/${user}/home.nix;
+                  hostSpecificPath = ./users/${user}/${host.name}-home.nix;
+                in
+                  if (builtins.pathExists hostSpecificPath)
+                  then import hostSpecificPath
+                  else import defaultPath;
               })
               host.users
             );
