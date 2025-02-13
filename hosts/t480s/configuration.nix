@@ -5,7 +5,8 @@
 
     # Include the PC archetype and desktop environment
     ../core
-    ../optional
+    ../optional/gui.nix
+    ../optional/stylix.nix
   ];
 
   # This value determines the NixOS release from which the default
