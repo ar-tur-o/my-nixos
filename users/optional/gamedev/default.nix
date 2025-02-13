@@ -1,5 +1,5 @@
 {
   imports = [
-    ./unityhub.nix
+    ./godot.nix
   ];
 }
