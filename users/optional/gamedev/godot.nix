@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.godot4];
+  home.packages = [pkgs.godot_4];
 }
