@@ -1,7 +1,8 @@
 TODO:
-- port over the host configs
-- port over all home modules
-  - core GUI is obsolete
-  - some core CLI needs porting
-  - optional modules may just be copy-pasted as-is
-- port over user configs
+[ ] port over the host configs
+[x] port over all home modules
+  * core GUI is obsolete
+  [x] some core CLI needs porting
+  [x] optional modules may just be copy-pasted as-is
+[ ] try moving osu laser to user modules
+[ ] port over user configs
