@@ -61,7 +61,7 @@
     in
     # this maps the host definition list into a host attrset
       builtins.listToAttrs (map (host: {
-        name = host.hostName;
+        name = host.name;
         value = let 
           # import the host config, home-manager config, and user defs
           getHostModules = host: [

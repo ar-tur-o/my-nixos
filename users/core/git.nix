@@ -1,14 +1,12 @@
 {
-  config,
-  lib,
   host,
   ...
 }: {
   programs.git = {
     enable = true;
-    userEmail = "toritosalgado90@gmail.com";
-    userName = "artisal@${host.hostName}";
-    # Git extenstions and such :)
+    userEmail = "salgadoarturo1219@gmail.com";
+    userName = "ar-tur-o@${host.name}";
+    # Git extensions and such :)
     diff-so-fancy.enable = true;
   };
 

@@ -87,7 +87,7 @@
 
   # ========== NETWORK ========== #
 
-  networking.hostName = host.hostName;
+  networking.hostName = host.name;
   networking.networkmanager.enable = true;
   networking.wireless.enable = false;
 }
