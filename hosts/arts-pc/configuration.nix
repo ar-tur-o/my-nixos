@@ -6,7 +6,7 @@
     # Include the PC archetype and desktop environment
     ../core
     ../optional/gnome.nix
-    ../optional/stylix.nixos
+    ../optional/stylix.nix
     ../optional/gaming-bundle.nix
   ];
 
