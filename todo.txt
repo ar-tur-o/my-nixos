@@ -1,7 +1,7 @@
 TODO:
-[ ] port over the host configs
+[x] port over the host configs
   [x] t480s
-  [ ] arts-pc
+  [x] arts-pc
 [x] port over all home modules
   * core GUI is obsolete
   [x] some core CLI needs porting

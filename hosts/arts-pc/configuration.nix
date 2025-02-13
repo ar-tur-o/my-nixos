@@ -5,7 +5,9 @@
 
     # Include the PC archetype and desktop environment
     ../core
-    ../optional
+    ../optional/gui.nix
+    ../optional/stylix.nixos
+    ../optional/gaming-bundle.nix
   ];
 
   services.flatpak.enable = true;
