@@ -7,6 +7,6 @@ with (import ./profiles-list.nix); [
   {
     name = "t480s";
     system = "x86_64-linux";
-    profiles = [arturos];
+    profiles = [arturos studyman];
   }
 ]

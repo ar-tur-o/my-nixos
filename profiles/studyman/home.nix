@@ -2,11 +2,9 @@
   imports = [
     # import programs here
     ../core
-    ../optional/files
-    ../optional/social
+    ../optional/files/bitwarden.nix
+    ../optional/social/spotify.nix
     ../optional/writing
-    ../optional/creative
-    ../optional/browsers
-    # games and gamedev are excluded by default
+    ../optional/browsers/chrome.nix
   ];
 }
