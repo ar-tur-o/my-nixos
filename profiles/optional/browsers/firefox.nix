@@ -1,6 +1,10 @@
 # Documentation at:
 # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.firefox.enable
-{lib, profile, ...}: {
+{
+  lib,
+  profile,
+  ...
+}: {
   programs.firefox = {
     enable = lib.mkDefault true;
 

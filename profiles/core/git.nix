@@ -1,4 +1,8 @@
-{host, profile, ...}: {
+{
+  host,
+  profile,
+  ...
+}: {
   programs.git = {
     enable = true;
     userEmail = profile.email;
