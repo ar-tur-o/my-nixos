@@ -9,6 +9,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enables flakes :)
   services.xserver.enable = true;
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.hostPlatform = host.system;
   environment.systemPackages = [pkgs.home-manager];
   home-manager.backupFileExtension = "backup";
 
