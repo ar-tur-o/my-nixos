@@ -1,11 +1,11 @@
 # Documentation at:
 # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.firefox.enable
-{lib, ...}: {
+{lib, profile, ...}: {
   programs.firefox = {
     enable = lib.mkDefault true;
 
     profiles = {
-      "Arturo Salgado" = {
+      ${profile.description} = {
         # no more extensions because they were buggy and inconvenient.
 
         settings = {

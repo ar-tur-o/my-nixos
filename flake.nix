@@ -71,10 +71,16 @@
                 value = let
                   defaultPath = ./profiles/${profile.username}/home.nix;
                   hostSpecificPath = ./profiles/${profile.username}/${host.name}-home.nix;
-                in
-                  if (builtins.pathExists hostSpecificPath)
-                  then import hostSpecificPath
-                  else import defaultPath;
+                in {
+                  _module.args.profile = profile;
+                  imports = [
+                    (
+                      if (builtins.pathExists hostSpecificPath)
+                      then hostSpecificPath
+                      else defaultPath
+                    )
+                  ];
+                };
               })
               host.profiles
             );
