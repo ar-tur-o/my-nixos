@@ -7,6 +7,9 @@
     ../core
     ../optional/gnome.nix
     ../optional/stylix.nix
+
+    # battery life module
+    ../optional/battery-life.nix
   ];
 
   # This value determines the NixOS release from which the default

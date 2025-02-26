@@ -6,7 +6,7 @@
     ../optional/social
     ../optional/writing
     ../optional/creative
-    ../optional/browsers/firefox.nix
+    ../optional/browsers
     # games and gamedev are excluded by default
   ];
 }
