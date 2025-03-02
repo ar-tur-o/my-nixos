@@ -2,7 +2,7 @@ with (import ./profiles-list.nix); [
   {
     name = "arts-pc";
     system = "x86_64-linux";
-    profiles = [arturos];
+    profiles = [arturos studyman];
   }
   {
     name = "t480s";
