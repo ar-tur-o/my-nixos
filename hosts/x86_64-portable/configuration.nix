@@ -1,16 +1,20 @@
 {
+  modulesPath,
+  host,
+  lib,
+  ...
+}: {
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-
-    # Include the PC archetype and desktop environment
     ../core
     ../optional/gnome.nix
     ../optional/stylix.nix
 
-    # battery life module
-    ../optional/battery-life.nix
+    # iso module
+    "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
   ];
+
+  # the build was complaining about this
+  programs.ssh.setXAuthLocation = lib.mkForce true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

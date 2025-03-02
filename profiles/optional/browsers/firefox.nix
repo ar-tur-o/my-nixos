@@ -4,17 +4,6 @@
   programs.firefox = {
     enable = lib.mkDefault true;
 
-    profiles = {
-      "Arturo Salgado" = {
-        # no more extensions because they were buggy and inconvenient.
-
-        settings = {
-          "extensions.autoDisableScopes" = 0; # this allows for extensions to be auto-enabled
-        };
-      };
-    };
-
-    # ========== POLICIES ========== #
     # Check about:policies#documentation for options.
     policies = {
       EnableTrackingProtection = {

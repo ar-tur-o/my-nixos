@@ -1,8 +1,12 @@
-{host, ...}: {
+{
+  host,
+  profile,
+  ...
+}: {
   programs.git = {
     enable = true;
-    userEmail = "salgadoarturo1219@gmail.com";
-    userName = "ar-tur-o@${host.name}";
+    userEmail = profile.email;
+    userName = "${profile.username}@${host.name}";
     # Git extensions and such :)
     diff-so-fancy.enable = true;
   };

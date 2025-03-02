@@ -43,7 +43,15 @@
     nixosConfigurations = let
       hosts = import ./host-list.nix;
 
-      # this imports the HM module with all users in the host defined
+      defineProfileUser = profile: {
+        users.users.${profile.username} = {
+          isNormalUser = true;
+          inherit (profile) description;
+          extraGroups = ["wheel" "networkmanager" "audio"];
+        };
+      };
+
+      # this imports the HM module with all profiles the host defined
       setupHmModule = host: [
         inputs.home-manager.nixosModules.home-manager
         {
@@ -58,17 +66,23 @@
             # and turns it into a attr set
             users = builtins.listToAttrs (
               builtins.map
-              (user: {
-                name = user;
+              (profile: {
+                name = profile.username;
                 value = let
-                  defaultPath = ./users/${user}/home.nix;
-                  hostSpecificPath = ./users/${user}/${host.name}-home.nix;
-                in
-                  if (builtins.pathExists hostSpecificPath)
-                  then import hostSpecificPath
-                  else import defaultPath;
+                  defaultPath = ./profiles/${profile.username}/home.nix;
+                  hostSpecificPath = ./profiles/${profile.username}/${host.name}-home.nix;
+                in {
+                  _module.args.profile = profile;
+                  imports = [
+                    (
+                      if (builtins.pathExists hostSpecificPath)
+                      then hostSpecificPath
+                      else defaultPath
+                    )
+                  ];
+                };
               })
-              host.users
+              host.profiles
             );
           };
         }
@@ -84,7 +98,7 @@
                 ./hosts/${host.name}/configuration.nix
               ]
               ++ (setupHmModule host)
-              ++ map (user: ./users/${user}/user-def.nix) host.users;
+              ++ map (profile: defineProfileUser profile) host.profiles;
           in
             inputs.nixpkgs.lib.nixosSystem {
               specialArgs = {
