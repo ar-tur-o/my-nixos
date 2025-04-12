@@ -13,11 +13,13 @@
     yelp # help viewer
     geary # email client
     seahorse # password manager
+    totem # "gnome videos" - A video player
     # these should be self explanatory
     gnome-contacts
     gnome-font-viewer
     gnome-weather
     gnome-maps
     gnome-tour
+    gnome-music
   ];
 }
