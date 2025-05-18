@@ -48,6 +48,7 @@
       AutofillAddressEnabled = false;
     };
   };
+
   home.sessionVariables = {
     BROWSER = "firefox";
   };

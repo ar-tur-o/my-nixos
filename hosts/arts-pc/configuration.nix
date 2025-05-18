@@ -8,6 +8,7 @@
     ../optional/gnome.nix
     ../optional/stylix.nix
     ../optional/gaming-bundle.nix
+    ../optional/fonts.nix
   ];
 
   services.flatpak.enable = true;
