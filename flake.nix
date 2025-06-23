@@ -41,7 +41,7 @@
         users.users.${profile.username} = {
           isNormalUser = true;
           inherit (profile) description;
-          extraGroups = ["wheel" "networkmanager" "audio"];
+          extraGroups = profile.groups;
         };
       };
 
