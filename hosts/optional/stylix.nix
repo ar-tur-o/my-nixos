@@ -25,8 +25,11 @@
     };
 
     image = ../../wallpaper.png;
-
-    cursor.package = pkgs.bibata-cursors;
-    cursor.name = "Bibata-Modern-Ice";
+    
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 10;
+    };
   };
 }
