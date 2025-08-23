@@ -12,6 +12,6 @@ echo "The following files were changed:"
 git status --short
 
 # only format if successfully built
-nix fmt
+#nix fmt ## fmt is broken and takes forever to format. For now no, formating
 git add .
 popd
