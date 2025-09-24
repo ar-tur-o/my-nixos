@@ -16,8 +16,8 @@
 
       SearchBar = "unified";
       NoDefaultBookmarks = true;
-      PasswordManagerEnabled = true;
-      StartDownloadsInTempDirectory = true;
+      PasswordManagerEnabled = false;
+      StartDownloadsInTempDirectory = false;
 
       # Firefox Suggest is the suggestions that appear when typing in the search bar.
       FirefoxSuggest = {
