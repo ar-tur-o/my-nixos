@@ -10,7 +10,12 @@
 
     # battery life module
     ../optional/battery-life.nix
+    
+    # Permissions for programs that burn CD's
+    ../optional/cd-burning-wrapper.nix
   ];
+
+  programs.adb.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

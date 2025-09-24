@@ -4,5 +4,6 @@
     ./qbittorrent.nix
     ./bitwarden.nix
     ./vlc.nix
+    ./k3b.nix
   ];
 }
