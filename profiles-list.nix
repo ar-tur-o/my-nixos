@@ -20,5 +20,6 @@ in {
     description = "Guest";
     email = "guest@example.com";
     groups = std-groups;
+    initialPassword = "";
   };
 }
