@@ -9,6 +9,9 @@
     ../optional/stylix.nix
     ../optional/gaming-bundle.nix
     ../optional/fonts.nix
+
+    # file server
+    ../optional/copyparty.nix
   ];
 
   services.flatpak.enable = true;

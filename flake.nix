@@ -22,6 +22,8 @@
       # if you are not running an unstable channel of nixpkgs, select the corresponding channel of nixvim
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    copyparty.url = "github:9001/copyparty";
   };
 
   outputs = {self, ...} @ inputs: let
