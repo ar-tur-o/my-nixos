@@ -13,9 +13,20 @@
     
     keymaps = [
       {
+        # Open the diagnostic using Tab
         mode = "n";
         key = "<Tab>"; 
-        action.__raw = "vim.diagnostic.open_float";
+        action.__raw = ''
+          function()
+            local diagnostics = vim.diagnostic.get(0, { lnum = vim.api.nvim_win_get_cursor(0)[1] - 1 })
+
+            if #diagnostics > 0 then
+              vim.diagnostic.open_float(nil, {focus = false})
+            else
+              vim.lsp.buf.hover()
+            end
+          end
+        '';
       }
     ];
 
