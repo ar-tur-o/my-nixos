@@ -10,6 +10,14 @@
       autoindent = true; # auto indent when inserting a new line?
       smartindent = true; # auto indent based on syntax?
     };
+    
+    keymaps = [
+      {
+        mode = "n";
+        key = "<Tab>"; 
+        action.__raw = "vim.diagnostic.open_float";
+      }
+    ];
 
     plugins = {
       lsp = {
