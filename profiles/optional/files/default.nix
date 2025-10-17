@@ -4,5 +4,6 @@
     ./qbittorrent.nix
     ./bitwarden.nix
     ./audio
+    ./emulation
   ];
 }
