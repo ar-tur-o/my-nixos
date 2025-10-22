@@ -2,8 +2,11 @@
   pkgs,
   host,
   lib,
+  inputs,
   ...
 }: {
+  nixpkgs.overlays = [inputs.nur.overlays.default];
+
   # ========== MISC CONFIG ========== #
 
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enables flakes :)
@@ -31,6 +34,16 @@
     input = {
       General = {
         ClassicBondedOnly = false;
+      };
+    };
+    settings = {
+      General = {
+        ControllerMode = "bredr";
+        Experimental = true;
+        FastConnectable = true;
+      };
+      Policy = {
+        AutoEnable = true;
       };
     };
   };

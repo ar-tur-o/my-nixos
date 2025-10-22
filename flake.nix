@@ -24,6 +24,9 @@
     };
     
     copyparty.url = "github:9001/copyparty";
+
+    # Nix user repository!!!
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = {self, ...} @ inputs: let
