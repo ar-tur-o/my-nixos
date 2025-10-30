@@ -13,6 +13,8 @@
     
     # Permissions for programs that burn CD's
     ../optional/cd-burning-wrapper.nix
+
+    ../optional/tethering.nix
   ];
 
   programs.adb.enable = true;

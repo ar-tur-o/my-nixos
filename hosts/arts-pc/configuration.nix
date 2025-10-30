@@ -14,7 +14,7 @@
     ../optional/copyparty.nix
 
     # KDE Connect!!!
-    ../optional/kdeconnect.nix
+    ../optional/tethering.nix
   ];
 
   services.flatpak.enable = true;
