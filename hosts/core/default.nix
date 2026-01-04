@@ -107,5 +107,5 @@
 
   networking.hostName = host.name;
   networking.networkmanager.enable = true;
-  networking.wireless.enable = false;
+  networking.wireless.enable = true;
 }
