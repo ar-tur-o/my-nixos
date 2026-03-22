@@ -15,6 +15,8 @@
     ../optional/cd-burning-wrapper.nix
 
     ../optional/tethering.nix
+
+    ../optional/gaming-bundle.nix
   ];
 
   programs.adb.enable = true;

@@ -108,4 +108,8 @@
   networking.hostName = host.name;
   networking.networkmanager.enable = true;
   networking.wireless.enable = true;
+  services.gvfs = {
+    enable = true;
+    package = pkgs.gnome.gvfs;
+  };
 }
