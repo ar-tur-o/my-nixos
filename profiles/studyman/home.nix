@@ -7,6 +7,5 @@
     ../optional/writing
     ../optional/browsers
     ../optional/files/audio
-    ../optional/files/emulation/boxes.nix
   ];
 }
