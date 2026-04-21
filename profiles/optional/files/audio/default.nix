@@ -4,7 +4,6 @@
     ./vlc.nix
     ./kid3.nix
     ./ffpeg.nix
-    ./gstreamer.nix
     ./elisa.nix
   ];
 }

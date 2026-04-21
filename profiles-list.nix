@@ -1,7 +1,7 @@
 let
   std-groups = ["networkmanager" "audio"];
   util-groups = ["adbuser" "cdrom" "cdrw"];
-  sudo-groups = ["wheel"] ++ std-groups;
+  sudo-groups = ["wheel" "libvirtd"] ++ std-groups;
 in {
   arturos = {
     username = "arturos";

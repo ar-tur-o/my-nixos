@@ -13,7 +13,18 @@
   services.xserver.enable = true;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = host.system;
-  environment.systemPackages = [pkgs.home-manager];
+  environment.systemPackages = with pkgs; [
+    home-manager
+    
+    # Gstreamer plugins
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-libav
+    gst_all_1.gst-vaapi
+  ];
   home-manager.backupFileExtension = "backup";
 
   # ========== BOOT ========== #
@@ -77,6 +88,8 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  environment.variables.GST_PLUGIN_PATH = "/run/current-system/sw/lib/gstreamer-1.0/";
 
   # adds support for yubikey
   services.udev.packages = [pkgs.libfido2];
