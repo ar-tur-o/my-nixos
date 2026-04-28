@@ -1,11 +1,14 @@
 {...}: {
   services.resolved = {
     enable = true;
-    settings.Resolve.FallbackDNS = [
-      "45.90.28.25"
-      "46.90.30.25"
-      "2a07:a8c0::8d:ebdd"
-      "2a07:a8c1::8d:ebdd"
-    ];
+    settings.Resolve = {
+      DNS = [
+        "45.90.28.0#8debdd.dns.nextdns.io"
+        "2a07:a8c0::#8debdd.dns.nextdns.io"
+        "45.90.30.0#8debdd.dns.nextdns.io"
+        "2a07:a8c1::#8debdd.dns.nextdns.io"
+      ];
+      DNSOverTLS = true;
+    };
   };
 }
