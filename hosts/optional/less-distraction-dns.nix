@@ -1,7 +1,7 @@
 {...}: {
   services.resolved = {
     enable = true;
-    fallbackDns = [
+    settings.Resolve.FallbackDNS = [
       "45.90.28.25"
       "46.90.30.25"
       "2a07:a8c0::8d:ebdd"

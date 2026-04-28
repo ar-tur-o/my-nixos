@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -8,8 +9,13 @@
     inputs.stylix.nixosModules.stylix
   ];
 
+  # scilence some warnings
+  #gtk.gtk4.theme = null;
+
   stylix = {
     enable = true;
+    
+    #targets.firefox.profileNames = ["default"];
 
     # This is the full list of themes
     # https://github.com/tinted-theming/schemes/tree/spec-0.11/base16

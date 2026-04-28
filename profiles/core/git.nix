@@ -5,10 +5,17 @@
 }: {
   programs.git = {
     enable = true;
-    userEmail = profile.email;
-    userName = "${profile.username}@${host.name}";
-    # Git extensions and such :)
-    diff-so-fancy.enable = true;
+    signing.format = "openpgp";
+    settings = {
+      user.email = profile.email;
+      user.name = "${profile.username}@${host.name}";
+    };
+  };
+  
+  # Git extensions and such :)
+  programs.diff-so-fancy = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   # To me, it makes sense to bundle github aswell
