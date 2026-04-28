@@ -5,5 +5,6 @@
     ./kid3.nix
     ./ffpeg.nix
     ./elisa.nix
+    ./picard.nix
   ];
 }

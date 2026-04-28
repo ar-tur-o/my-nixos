@@ -19,6 +19,8 @@
     ../optional/gaming-bundle.nix
 
     ../optional/virutalisation.nix
+
+    ../optional/less-distraction-dns.nix
   ];
 
   # This value determines the NixOS release from which the default
