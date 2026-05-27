@@ -49,6 +49,7 @@
     };
     settings = {
       General = {
+        Enable = "Source,Sink,Media,Socket";
         ControllerMode = "bredr";
         Experimental = true;
         FastConnectable = true;
@@ -80,13 +81,16 @@
 
   # sound
   services.pulseaudio.enable = false;
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    audio.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
   };
 
   environment.variables.GST_PLUGIN_PATH = "/run/current-system/sw/lib/gstreamer-1.0/";

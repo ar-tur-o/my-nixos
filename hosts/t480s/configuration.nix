@@ -9,7 +9,7 @@
     ../optional/stylix.nix
 
     # battery life module
-    ../optional/battery-life.nix
+    #../optional/battery-life.nix
     
     # Permissions for programs that burn CD's
     ../optional/cd-burning-wrapper.nix
@@ -20,8 +20,10 @@
 
     ../optional/virutalisation.nix
 
-    ../optional/less-distraction-dns.nix
+    #../optional/less-distraction-dns.nix
   ];
+
+  services.flatpak.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -7,4 +7,6 @@
     ./browsh.nix
     ./boilerplate.nix # this isn't a program, it just sets important attrs
   ];
+
+  services.mpris-proxy.enable = true;
 }
