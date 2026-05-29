@@ -1,5 +1,6 @@
 {inputs, ...}: {
   imports = [inputs.nixvim.homeManagerModules.nixvim];
+  programs.opencode.enable = false;
   programs.nixvim = {
     enable = true;
     opts = {
