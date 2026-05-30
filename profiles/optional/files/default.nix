@@ -1,9 +1,21 @@
+{lib, config, pkgs, myLib, ...}:
+let 
+  cfg = config.myHome;
+  sp = myLib.simplePkgs {inherit lib cfg;} {
+    bitwarden = pkgs.bitwarden-desktop;
+    insync = pkgs.insync;
+    qbittorrent = pkgs.qbittorrent;
+    # I had k3b here but it didn't work
+  };
+in
 {
-  imports = [
-    ./insync.nix
-    ./qbittorrent.nix
-    ./bitwarden.nix
-    ./audio
-    ./emulation
-  ];
+  options.myHome = {
+    bundles.files.enable = lib.mkEnableOption "Enable file tools";
+  } // sp.options;
+
+  config = {
+    home.packages = sp.homePackages;
+
+    myHome = sp.bundleDefaults "files";
+  };
 }

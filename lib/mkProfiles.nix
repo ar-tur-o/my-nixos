@@ -3,8 +3,8 @@
   {
     home-manager = {
       extraSpecialArgs = {
-        inherit inputs;
-        inherit host;
+        inherit inputs host;
+        myLib.simplePkgs = import ./simplePkgs.nix;
       };
       useGlobalPkgs = true;
       useUserPackages = true;

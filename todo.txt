@@ -1,10 +1,10 @@
 TODO:
-[x] port over the host configs
-  [x] t480s
-  [x] arts-pc
-[x] port over all home modules
-  * core GUI is obsolete
-  [x] some core CLI needs porting
-  [x] optional modules may just be copy-pasted as-is
-[x] try moving osu laser to user modules
-[x] port over user configs
+[ ] Refactor Profiles
+  [x] Browsers
+  [x] Creative
+  [x] Files
+  [x] Gamedev
+  [x] Gaming
+  [x] Social
+  [x] Writing
+  [x] Media
