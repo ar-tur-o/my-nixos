@@ -7,6 +7,7 @@ let
     inkscape = pkgs.inkscape;
     krita = pkgs.krita;
     orcaSlicer = pkgs.orca-slicer;
+    bespokeSynth = pkgs.bespokesynth-with-vst2;
   };
 in
 {

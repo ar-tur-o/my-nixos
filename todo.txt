@@ -1,10 +1,12 @@
 TODO:
-[ ] Refactor Profiles
-  [x] Browsers
-  [x] Creative
-  [x] Files
-  [x] Gamedev
-  [x] Gaming
-  [x] Social
-  [x] Writing
-  [x] Media
+[ ] Refactor Host Optional
+  [x] Battery Life 
+  [x] CD-Wrapper
+  [x] Copyparty
+  [x] Fonts
+  [x] Gaming Bundle (steam, sunshine)
+  [ ] Gnome
+  [ ] less distraction
+  [ ] stylix
+  [ ] tethering
+  [ ] virtualization 

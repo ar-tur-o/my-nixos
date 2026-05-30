@@ -4,26 +4,18 @@
     ./hardware-configuration.nix
 
     # Include the PC archetype and desktop environment
-    ../core
-    ../optional/gnome.nix
-    ../optional/stylix.nix
-
-    # battery life module
-    #../optional/battery-life.nix
-    
-    # Permissions for programs that burn CD's
-    ../optional/cd-burning-wrapper.nix
-
-    ../optional/tethering.nix
-
-    ../optional/gaming-bundle.nix
-
-    ../optional/virutalisation.nix
-
-    #../optional/less-distraction-dns.nix
+    ../core/desktop.nix
   ];
 
-  services.flatpak.enable = true;
+  myHost = {
+    gnome.enable = true;
+    stylix.enable = true;
+    cdBurningWrapper.enable = true;
+    tethering.enable = true;
+    virtualization.enable = true;
+
+    lessDistractionDns.enable = false;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

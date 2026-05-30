@@ -1,0 +1,17 @@
+{
+  imports = [
+    ./battery-life.nix
+    ./cd-burning-wrapper.nix
+    ./copyparty.nix
+    ./fonts.nix
+    ./gnome.nix
+    ./less-distraction-dns.nix
+    ./stylix.nix
+    ./steam.nix
+    ./sunshine.nix
+    ./roblox.nix
+    ./tethering.nix
+    ./virtualization.nix
+    ./flatpak.nix
+  ];
+}

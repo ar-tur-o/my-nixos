@@ -5,6 +5,8 @@ let
     bitwarden = pkgs.bitwarden-desktop;
     insync = pkgs.insync;
     qbittorrent = pkgs.qbittorrent;
+    impression = pkgs.impression;
+    brasero = pkgs.brasero;
     # I had k3b here but it didn't work
   };
 in

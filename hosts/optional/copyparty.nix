@@ -1,34 +1,48 @@
-{pkgs, inputs, ...}: 
 {
+  pkgs,
+  inputs,
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.myHost;
+in {
   imports = [inputs.copyparty.nixosModules.default];
-
-  nixpkgs.overlays = [inputs.copyparty.overlays.default];
   
-  environment.systemPackages = [
-    pkgs.copyparty
-    pkgs.cloudflared # ill figure this out later
-  ];
+  options.myHost.copyparty = {
+    enable = lib.mkEnableOption "Enable copyparty file server";
+  };
 
-  services.copyparty = {
-    enable = true;
-    user = "copyparty";
-    group = "copyparty";
-    
-    accounts = {};
+  config = lib.mkIf cfg.copyparty.enable {
 
-    groups = {};
+    nixpkgs.overlays = [inputs.copyparty.overlays.default];
 
-    volumes = {
-      "/" = {
-        path = "/srv/copyparty";
+    environment.systemPackages = [
+      pkgs.copyparty
+      pkgs.cloudflared # ill figure this out later
+    ];
 
-        access = {
-          r = "*";
-          # rw = []; # ill figure out users later
-        };
+    services.copyparty = {
+      enable = true;
+      user = "copyparty";
+      group = "copyparty";
 
-        flags = {
-          scan = 120; # scan every 2 min
+      accounts = {};
+
+      groups = {};
+
+      volumes = {
+        "/" = {
+          path = "/srv/copyparty";
+
+          access = {
+            r = "*";
+            # rw = []; # ill figure out users later
+          };
+
+          flags = {
+            scan = 120; # scan every 2 min
+          };
         };
       };
     };

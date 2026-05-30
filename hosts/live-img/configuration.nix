@@ -1,13 +1,10 @@
 {
   modulesPath,
-  host,
   lib,
   ...
 }: {
   imports = [
-    ../core
-    ../optional/gnome.nix
-    ../optional/stylix.nix
+    ../core/base.nix
 
     # iso module
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"

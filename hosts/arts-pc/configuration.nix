@@ -3,21 +3,20 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-    # Include the PC archetype and desktop environment
-    ../core
-    ../optional/gnome.nix
-    ../optional/stylix.nix
-    ../optional/gaming-bundle.nix
-    ../optional/fonts.nix
-
-    # file server
-    ../optional/copyparty.nix
-
-    # KDE Connect!!!
-    ../optional/tethering.nix
+    # Import the core desktop boilerplate
+    ../core/desktop.nix
   ];
 
-  services.flatpak.enable = true;
+  myHost = {
+    gnome.enable = true;
+    fonts.enable = true;
+    stylix.enable = true;
+    steam.enable = true;
+    sunshine.enable = true;
+    roblox.enable = true;
+    copyparty.enable = true;
+    tethering.enable = true;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
