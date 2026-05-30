@@ -13,7 +13,8 @@
   #gtk.gtk4.theme = null;
 
   stylix = {
-    enable = true;
+    enable = true; 
+    autoEnable = false; # this shit doesn't want to play nice
     
     #targets.firefox.profileNames = ["default"];
 

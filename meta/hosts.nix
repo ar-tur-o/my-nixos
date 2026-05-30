@@ -1,4 +1,4 @@
-with (import ./profiles-list.nix); [
+with (import ./profiles.nix); [
   {
     name = "arts-pc";
     system = "x86_64-linux";
