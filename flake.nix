@@ -7,15 +7,10 @@
     stylix.url = "github:danth/stylix";
     copyparty.url = "github:9001/copyparty";
     nur.url = "github:nix-community/NUR";
+    nixvim.url = "github:nix-community/nixvim";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      # if you are not running an unstable channel of nixpkgs, select the corresponding channel of nixvim
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

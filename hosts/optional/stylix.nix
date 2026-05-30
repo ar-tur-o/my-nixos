@@ -15,8 +15,6 @@
   stylix = {
     enable = true; 
     autoEnable = true; # this shit doesn't want to play nice
-    
-    #targets.firefox.profileNames = ["default"];
 
     # This is the full list of themes
     # https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
