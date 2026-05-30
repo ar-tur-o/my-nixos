@@ -14,7 +14,7 @@
 
   stylix = {
     enable = true; 
-    autoEnable = false; # this shit doesn't want to play nice
+    autoEnable = true; # this shit doesn't want to play nice
     
     #targets.firefox.profileNames = ["default"];
 
