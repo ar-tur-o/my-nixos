@@ -12,7 +12,7 @@
     stylix.enable = true;
     cdBurningWrapper.enable = true;
     tethering.enable = true;
-    virtualization.enable = true;
+    vm.enable = true;
 
     lessDistractionDns.enable = false;
   };

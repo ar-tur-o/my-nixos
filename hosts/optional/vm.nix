@@ -4,10 +4,10 @@
   lib,
   ...
 }: {
-  options.myHost.virtualisation.enable = lib.mkEnableOption "Enable virtualisation";
+  options.myHost.vm.enable = lib.mkEnableOption "Enable virtualisation";
 
   config =
-    lib.mkIf config.myHost.virtualisation.enable
+    lib.mkIf config.myHost.vm.enable
     {
       virtualisation.libvirtd = {
         enable = true;

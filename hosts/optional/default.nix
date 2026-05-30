@@ -11,7 +11,7 @@
     ./sunshine.nix
     ./roblox.nix
     ./tethering.nix
-    ./virtualization.nix
+    ./vm.nix
     ./flatpak.nix
   ];
 }
