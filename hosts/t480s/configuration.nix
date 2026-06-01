@@ -14,7 +14,7 @@
     tethering.enable = true;
     vm.enable = true;
 
-    lessDistractionDns.enable = false;
+    lessDistractionDns.enable = true;
   };
 
   # This value determines the NixOS release from which the default
