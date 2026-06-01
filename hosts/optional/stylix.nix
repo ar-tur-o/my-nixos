@@ -17,8 +17,9 @@
     lib.mkIf config.myHost.stylix.enable
     {
 
-      # scilence some warnings
-      #gtk.gtk4.theme = null;
+      user-profiles.boilerplateModules = lib.optionals config.myHost.gnome.enable [{
+        stylix.targets.qt.platform = lib.mkForce "qtct";
+      }];
 
       stylix = {
         enable = true;

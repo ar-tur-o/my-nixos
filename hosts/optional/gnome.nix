@@ -10,12 +10,16 @@
     lib.mkIf config.myHost.gnome.enable
     {
       # I'm using gnome as my desktop environment rn
-
+      
       services.desktopManager.gnome.enable = true;
       services.displayManager.gdm.enable = true;
 
       environment.systemPackages = [pkgs.gnome-tweaks];
       qt.platformTheme = "gnome";
+
+      user-profiles.boilerplateModules = [{
+        qt.platformTheme.name = lib.mkForce "adwaita";
+      }];
 
       environment.gnome.excludePackages = with pkgs; [
         epiphany # web browser

@@ -14,6 +14,11 @@
 
   options.user-profiles = {
     enable = lib.mkEnableOption "Enables user-profiles user management";
+    boilerplateModules = lib.mkOption {
+      description = "boilerplate modules that are imported to all profiles";
+      type = lib.types.listOf lib.types.deferredModule;
+      default = [];
+    };
     profiles = lib.mkOption {
       type = lib.types.attrsOf (lib.types.submodule {
         options = {
@@ -59,7 +64,7 @@
               then hostSpecificPath
               else defaultPath
             )
-          ];
+          ] ++ config.user-profiles.boilerplateModules;
         })
         profiles;
     };

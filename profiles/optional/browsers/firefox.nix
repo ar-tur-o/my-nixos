@@ -3,6 +3,7 @@
 {
   lib,
   config,
+  profile,
   ...
 }: let
   cfg = config.myHome.firefox;
@@ -14,6 +15,8 @@ in {
   config =
     lib.mkIf cfg.enable
     {
+      stylix.targets.firefox.profileNames = lib.optionals config.stylix.enable ["MainUser"];
+
       programs.firefox = {
         enable = lib.mkDefault true;
 
