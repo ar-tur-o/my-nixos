@@ -36,7 +36,7 @@
   config = let
     hostName = config.networking.hostName;
     profiles = builtins.mapAttrs (name: value: {username = name;} // value) config.user-profiles.profiles;
-  in {
+  in lib.mkIf config.user-profiles.enable {
     environment.systemPackages = [pkgs.home-manager];
 
     home-manager = {
@@ -48,7 +48,7 @@
       useUserPackages = true;
 
       users =
-        builtins.mapAttrs (n: profile: let
+        builtins.mapAttrs (_: profile: let
           defaultPath = "${self}/profiles/${profile.username}/home.nix";
           hostSpecificPath = "${self}/profiles/${profile.username}/${hostName}-home.nix";
         in {
@@ -66,7 +66,7 @@
 
     # Sets up the users
     users.users =
-      builtins.mapAttrs (n: profile: {
+      builtins.mapAttrs (_: profile: {
         inherit (profile) description initialPassword;
         isNormalUser = true;
         extraGroups = profile.groups;
