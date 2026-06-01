@@ -1,36 +1,76 @@
-{inputs, self}: host: [
-  inputs.home-manager.nixosModules.home-manager
-  {
+{
+  inputs,
+  self,
+  lib,
+  myLib,
+  host,
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
+  options.user-profiles = {
+    enable = lib.mkEnableOption "Enables user-profiles user management";
+    profiles = lib.mkOption {
+      type = lib.types.attrsOf (lib.types.submodule {
+        options = {
+          description = lib.mkOption {type = lib.types.str;};
+          email = lib.mkOption {type = lib.types.str;};
+          groups = lib.mkOption {
+            type = lib.types.listOf lib.types.str;
+            default = [];
+          };
+          initialPassword = lib.mkOption {
+            type = lib.types.str;
+            default = "";
+          };
+        };
+      });
+      default = {};
+    };
+  };
+
+  config = let
+    hostName = config.networking.hostName;
+    profiles = builtins.mapAttrs (name: value: {username = name;} // value) config.user-profiles.profiles;
+  in {
+    environment.systemPackages = [pkgs.home-manager];
+
     home-manager = {
+      backupFileExtension = "backup";
       extraSpecialArgs = {
-        inherit inputs host;
-        myLib.simplePkgs = import ./simplePkgs.nix;
+        inherit inputs host myLib;
       };
       useGlobalPkgs = true;
       useUserPackages = true;
 
-      # this wad of code imports all the users in the users list
-      # and turns it into a attr set
-      users = builtins.listToAttrs (
-        builtins.map
-        (profile: {
-          name = profile.username;
-          value = let
-            defaultPath = "${self}/profiles/${profile.username}/home.nix";
-            hostSpecificPath = "${self}/profiles/${profile.username}/${host.name}-home.nix";
-          in {
-            _module.args.profile = profile;
-            imports = [
-              (
-                if (builtins.pathExists hostSpecificPath)
-                then hostSpecificPath
-                else defaultPath
-              )
-            ];
-          };
+      users =
+        builtins.mapAttrs (n: profile: let
+          defaultPath = "${self}/profiles/${profile.username}/home.nix";
+          hostSpecificPath = "${self}/profiles/${profile.username}/${hostName}-home.nix";
+        in {
+          _module.args.profile = profile;
+          imports = [
+            (
+              if (builtins.pathExists hostSpecificPath)
+              then hostSpecificPath
+              else defaultPath
+            )
+          ];
         })
-        host.profiles
-      );
+        profiles;
     };
-  }
-]
+
+    # Sets up the users
+    users.users =
+      builtins.mapAttrs (n: profile: {
+        inherit (profile) description initialPassword;
+        isNormalUser = true;
+        extraGroups = profile.groups;
+      })
+      profiles;
+  };
+}

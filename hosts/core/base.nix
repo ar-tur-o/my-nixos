@@ -16,12 +16,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = host.system;
 
-  environment.systemPackages = with pkgs; [
-    home-manager
-  ];
-
-  home-manager.backupFileExtension = "backup";
-
   # ========== BOOT ========== #
 
   boot.loader.systemd-boot.enable = lib.mkDefault true;

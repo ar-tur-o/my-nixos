@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, profiles, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -18,6 +18,11 @@
     tethering.enable = true;
     vm.enable = true;
   };
+
+  user-profiles = {
+    enable = true;
+    profiles = { inherit (profiles) arturos guest; };
+  }
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
