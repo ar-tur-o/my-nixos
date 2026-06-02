@@ -22,7 +22,7 @@
   user-profiles = {
     enable = true;
     profiles = { inherit (profiles) arturos guest; };
-  }
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
