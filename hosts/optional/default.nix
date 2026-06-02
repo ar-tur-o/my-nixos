@@ -13,5 +13,6 @@
     ./tethering.nix
     ./vm.nix
     ./flatpak.nix
+    ./wine.nix
   ];
 }

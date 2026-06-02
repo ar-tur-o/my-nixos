@@ -14,6 +14,7 @@
     cdBurningWrapper.enable = true;
     tethering.enable = true;
     vm.enable = true;
+    wine.enable = true;
 
     lessDistractionDns.enable = true;
   };
