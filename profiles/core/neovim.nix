@@ -37,6 +37,8 @@
           nil_ls.enable = true; # Nix
           bashls.enable = true; # Bash
 
+          omnisharp.enable = true; # C sharp
+
           # more performant langs
           ccls.enable = true; # C / C++
           cmake.enable = true;

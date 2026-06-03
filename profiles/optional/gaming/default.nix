@@ -3,7 +3,7 @@ let
   cfg = config.myHome;
   sp = myLib.simplePkgs {inherit lib cfg;} {
     itch = pkgs.itch;
-    minecraft = pkgs.prismlauncher;
+    minecraft = [pkgs.prismlauncher pkgs.mcpelauncher-ui-qt];
     moonlight = pkgs.moonlight-qt;
     osu = pkgs.osu-lazer-bin;
     pcsx2 = pkgs.pcsx2;
