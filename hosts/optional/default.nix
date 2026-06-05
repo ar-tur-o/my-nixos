@@ -1,20 +1,12 @@
 {
   imports = [
+    ./flatpak.nix
+    ./tethering.nix
     ./battery-life.nix
     ./cd-burning-wrapper.nix
-    ./copyparty.nix
-    ./fonts.nix
-    ./gnome.nix
-    ./less-distraction-dns.nix
-    ./stylix.nix
-    ./steam.nix
-    ./sunshine.nix
-    ./roblox.nix
-    ./tethering.nix
-    ./vm.nix
-    ./flatpak.nix
-    ./wine.nix
-    ./nextcloud.nix
-    ./immich.nix
+
+    ./gaming
+    ./server
+    ./desktop
   ];
 }

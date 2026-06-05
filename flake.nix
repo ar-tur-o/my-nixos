@@ -5,10 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     stylix.url = "github:danth/stylix";
-    copyparty.url = "github:9001/copyparty";
     nur.url = "github:nix-community/NUR";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    copyparty.url = "github:9001/copyparty";
+    playit.url = "github:pedorich-n/playit-nixos-module";
+
     agenix.url = "github:ryantm/agenix";
 
     home-manager = {
