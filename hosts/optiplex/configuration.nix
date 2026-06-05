@@ -11,6 +11,7 @@
   myHost = {
     stylix.enable = true;
     nextcloudServer.enable = true;
+    immich.enable = false; # Immich is redundant b/c photos here are just backed up, not browsed
   };
 
   user-profiles = {

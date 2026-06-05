@@ -9,4 +9,6 @@ let
   # example
   "api/key.age".publicKeys = [optiplex.arturos.pub];
   "nextcloud-admin.age".publicKeys = [optiplex.pub];
+  "cloudflare-tunnel.age".publicKeys = [optiplex.pub];
+  "immich.age".publicKeys = [optiplex.pub];
 }
