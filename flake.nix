@@ -9,6 +9,7 @@
     nur.url = "github:nix-community/NUR";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    agenix.url = "github:ryantm/agenix";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";

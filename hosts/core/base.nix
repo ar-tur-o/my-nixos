@@ -5,7 +5,10 @@
   inputs,
   ...
 }: {
-  imports = [../optional];
+  imports = [
+    ../optional
+    ./agenix.nix
+  ];
 
   nixpkgs.overlays = [inputs.nur.overlays.default];
 
@@ -65,5 +68,9 @@
   services.gvfs = {
     enable = true;
     package = pkgs.gnome.gvfs;
+  };
+
+  services.openssh = {
+    enable = true;
   };
 }
