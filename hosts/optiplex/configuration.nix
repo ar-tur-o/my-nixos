@@ -10,6 +10,7 @@
 
   myHost = {
     stylix.enable = true;
+    nextcloudServer.enable = true;
   };
 
   user-profiles = {

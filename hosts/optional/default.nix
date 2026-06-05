@@ -14,5 +14,6 @@
     ./vm.nix
     ./flatpak.nix
     ./wine.nix
+    ./nextcloud.nix
   ];
 }
