@@ -5,14 +5,16 @@
   inputs,
   ...
 }: {
-  imports = [../optional];
+  imports = [
+    ../optional
+    ./agenix.nix
+  ];
 
   nixpkgs.overlays = [inputs.nur.overlays.default];
 
   # ========== MISC CONFIG ========== #
 
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enables flakes :)
-  services.xserver.enable = true;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = host.system;
 
@@ -67,5 +69,9 @@
   services.gvfs = {
     enable = true;
     package = pkgs.gnome.gvfs;
+  };
+
+  services.openssh = {
+    enable = true;
   };
 }

@@ -6,6 +6,8 @@
 
   # ========== MISC CONFIG ========== #
   # inherited hm, config, flake boilerplate
+  
+  services.xserver.enable = true;
 
   environment.systemPackages = with pkgs; [
     # Gstreamer plugins

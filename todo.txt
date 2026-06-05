@@ -1,1 +1,5 @@
 TODO:
+- Refactor nextcloud and immich
+- Make a way of autosetting secret paths
+
+
