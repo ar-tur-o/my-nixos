@@ -61,6 +61,7 @@
   # ========== NETWORK ========== #
 
   networking.hostName = host.name;
+  networking.extraHosts = "10.0.0.213 optiplex";
   networking.networkmanager.enable = true;
   networking.wireless.enable = true;
   services.gvfs = {

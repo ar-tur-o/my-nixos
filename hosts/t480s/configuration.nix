@@ -21,7 +21,7 @@
 
   user-profiles = {
     enable = true;
-    profiles = { inherit (profiles) studyman guest; };
+    profiles = { inherit (profiles) arturos; };
   };
 
   # This value determines the NixOS release from which the default
