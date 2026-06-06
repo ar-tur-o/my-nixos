@@ -5,4 +5,5 @@ self: {
   };
   cloudflare-tunnel = {};
   immich = {};
+  playit = {};
 }

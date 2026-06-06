@@ -1,4 +1,4 @@
-{lib, config, self, ...}:
+{lib, config, ...}:
 {
   options.myHost.immich.enable = lib.mkEnableOption "Enables Immich";
 
@@ -9,6 +9,11 @@
       port = 2283;
       openFirewall = true;
       secretsFile = config.age.secrets.immich.path;
+    };
+
+    myHost.cloudflared = {
+      enable = true;
+      ingress = {"immich.computer-day.com" = "http://localhost:2283";};
     };
   };
 }

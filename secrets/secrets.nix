@@ -11,4 +11,5 @@ let
   "nextcloud-admin.age".publicKeys = [optiplex.pub];
   "cloudflare-tunnel.age".publicKeys = [optiplex.pub];
   "immich.age".publicKeys = [optiplex.pub];
+  "playit.age".publicKeys = [optiplex.pub];
 }

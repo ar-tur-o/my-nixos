@@ -11,7 +11,11 @@
   myHost = {
     stylix.enable = true;
     nextcloudServer.enable = true;
-    immich.enable = false; # Immich is redundant b/c photos here are just backed up, not browsed
+    playit.enable = true;
+    cloudflared = {
+      enable = true; # redundant, but whatever
+      tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
+    };
   };
 
   user-profiles = {

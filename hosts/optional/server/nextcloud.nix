@@ -13,13 +13,17 @@
       config.dbtype = "sqlite";
     };
 
+    myHost.cloudflared = {
+      enable = true;
+      ingress = {"nextcloud.computer-day.com" = "http://localhost:80";};
+    };
+
     services.cloudflared = {
       enable = true;
       tunnels = {
         "656d5403-a187-42a7-a57e-f2ec3e7cfd39" = {
           credentialsFile = config.age.secrets.cloudflare-tunnel.path;
           ingress = {
-            "nextcloud.computer-day.com" = "http://localhost:80";
             "immich.computer-day.com" = "http://localhost:2283";
           };
           default = "http_status:404";
