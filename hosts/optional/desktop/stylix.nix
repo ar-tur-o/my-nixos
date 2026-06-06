@@ -3,6 +3,7 @@
   inputs,
   config,
   lib,
+  self,
   ...
 }: {
   imports = [
@@ -38,7 +39,7 @@
           popups = 0.90;
         };
 
-        image = ../../wallpaper.png;
+        image = "${self}/wallpaper.png";
 
         cursor = {
           name = "Bibata-Modern-Ice";

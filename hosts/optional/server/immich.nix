@@ -1,4 +1,4 @@
-{pkgs, lib, config, self, ...}:
+{lib, config, self, ...}:
 {
   options.myHost.immich.enable = lib.mkEnableOption "Enables Immich";
 
@@ -10,7 +10,5 @@
       openFirewall = true;
       secretsFile = config.age.secrets.immich.path;
     };
-
-    age.secrets.immich.file = "${self}/secrets/immich.age";
   };
 }

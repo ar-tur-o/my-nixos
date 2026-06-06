@@ -3,9 +3,6 @@
   options.myHost.nextcloudServer.enable = lib.mkEnableOption "Enable Nextcloud server on this device";
 
   config = lib.mkIf config.myHost.nextcloudServer.enable {
-    age.secrets.nextcloud-admin.file = "${self}/secrets/nextcloud-admin.age";
-    age.secrets.cloudflare-tunnel.file = "${self}/secrets/cloudflare-tunnel.age";
-
     services.nextcloud = {
       enable = true;
       package = pkgs.nextcloud32;

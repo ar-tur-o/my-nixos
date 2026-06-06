@@ -15,6 +15,7 @@ inputs.nixpkgs.lib.nixosSystem {
   modules = [
     "${self}/hosts/${hostName}/configuration.nix"
     ./mkProfiles.nix
+    ./mkSecrets.nix
   ];
 })
 hosts
