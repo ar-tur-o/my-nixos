@@ -6,4 +6,5 @@ self: {
   cloudflare-tunnel = {};
   immich = {};
   playit = {};
+  tailscale = {};
 }

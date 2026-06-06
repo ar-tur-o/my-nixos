@@ -12,4 +12,5 @@ let
   "cloudflare-tunnel.age".publicKeys = [optiplex.pub];
   "immich.age".publicKeys = [optiplex.pub];
   "playit.age".publicKeys = [optiplex.pub];
+  "tailscale.age".publicKeys = [optiplex.pub];
 }
