@@ -12,6 +12,7 @@
     stylix.enable = true;
     nextcloudServer.enable = true;
     playit.enable = true;
+    tailscale.enable = true;
     cloudflared = {
       enable = true; # redundant, but whatever
       tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
