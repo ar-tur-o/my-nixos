@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "admp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781454537,
+        "narHash": "sha256-oaIywxdibpdToX7BWXugazyZyB8dd2VFg8VPgXcsCAA=",
+        "owner": "ar-tur-o",
+        "repo": "admp",
+        "rev": "17c402b79888c6642dfcd24333cbbc6088873035",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ar-tur-o",
+        "repo": "admp",
+        "type": "github"
+      }
+    },
     "agenix": {
       "inputs": {
         "darwin": "darwin",
@@ -629,6 +645,7 @@
     },
     "root": {
       "inputs": {
+        "admp": "admp",
         "agenix": "agenix",
         "copyparty": "copyparty",
         "home-manager": "home-manager_2",

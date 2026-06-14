@@ -13,8 +13,8 @@
         # Arturo's Diagetic Modpack 1.0
         admp = let
           modpack = pkgs.fetchModrinthModpack {
-            url = "https://github.com/ar-tur-o/admp/raw/refs/heads/main/admp-1_0_5.mrpack";
-            packHash = "sha256-L6YdR8I4AvY3cqaqqeYUEM3ga400g9b68uIRsFvoM08=";
+            src = "${inputs.admp}/admp-1_0_7.mrpack";
+            packHash = "sha256-TXAQ0yopX0tNA5kxS9ccLrhUDJ50KDsDrjdCi1exVaU=";
             side = "server";
           };
         in {
