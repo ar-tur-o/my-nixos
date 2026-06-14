@@ -17,6 +17,7 @@
       enable = true; # redundant, but whatever
       tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
     };
+    minecraft-server.enable = true;
   };
 
   user-profiles = {

@@ -1,5 +1,5 @@
 TODO:
-- Refactor nextcloud and immich
-- Make a way of autosetting secret paths
-
-
+- Automatically configure "networking.extraHosts" in mkHosts
+  - Use their tailscale IP
+- remove copyparty (?) and immich
+  - including secrets and flake inputs

@@ -10,6 +10,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     copyparty.url = "github:9001/copyparty";
     playit.url = "github:pedorich-n/playit-nixos-module";
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     agenix.url = "github:ryantm/agenix";
 
