@@ -6,8 +6,9 @@ let
     minecraft = [pkgs.prismlauncher pkgs.mcpelauncher-ui-qt];
     moonlight = pkgs.moonlight-qt;
     osu = pkgs.osu-lazer-bin;
-    pcsx2 = pkgs.pcsx2;
-    rpcs3 = pkgs.rpcs3;
+    # I don't even use emulators??
+    #pcsx2 = pkgs.pcsx2;
+    #rpcs3 = pkgs.rpcs3;
   };
 in
 {

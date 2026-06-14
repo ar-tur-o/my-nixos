@@ -17,6 +17,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"]; # enables flakes :)
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = host.system;
+  nixpkgs.config.permittedInsecurePackages = ["electron-39.8.10"]; # end of life reached for this
 
   # ========== BOOT ========== #
 
