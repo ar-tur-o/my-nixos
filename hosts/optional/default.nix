@@ -9,5 +9,6 @@
     ./gaming
     ./server
     ./desktop
+    ./minecraft-server
   ];
 }

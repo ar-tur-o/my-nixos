@@ -13,8 +13,8 @@
         # Arturo's Diagetic Modpack 1.0
         admp = let
           modpack = pkgs.fetchModrinthModpack {
-            src = "${inputs.admp}/admp-1_0_7.mrpack";
-            packHash = "sha256-TXAQ0yopX0tNA5kxS9ccLrhUDJ50KDsDrjdCi1exVaU=";
+            src = "${inputs.admp}/TwoWeeks-1_1_2.mrpack";
+            packHash = "sha256-CtOs76Kn9XGMj0sxL81uu3dyxpikd2E4TC/m7rpPKsc=";
             side = "server";
           };
         in {
@@ -24,12 +24,17 @@
           package = pkgs.neoforgeServers.neoforge-1_21_1-21_1_233;
 
           serverProperties = {
+            allow-flight = true;
             server-port = 25565;
             gamemode = "survival";
             difficulty = "hard";
+            level-seed = 1801915356025060336;
             max-players = 10;
-            white-list = true;
-            motd = "Arturo's Diagetic Modpack";
+            white-list = false;
+            view-distance = 8;
+            simulation-distance = 4;
+            network-compression-threshold = 256;
+            motd = "The one piece is real...";
           };
 
           whitelist = {

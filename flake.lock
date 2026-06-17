@@ -3,11 +3,11 @@
     "admp": {
       "flake": false,
       "locked": {
-        "lastModified": 1781454537,
-        "narHash": "sha256-oaIywxdibpdToX7BWXugazyZyB8dd2VFg8VPgXcsCAA=",
+        "lastModified": 1781658554,
+        "narHash": "sha256-W8pcPQcZFLKok/SPqJFeRy0nPMrkRqwHNhFC3axcdTQ=",
         "owner": "ar-tur-o",
         "repo": "admp",
-        "rev": "17c402b79888c6642dfcd24333cbbc6088873035",
+        "rev": "0de11148cdaeaf8b9e6fa3f5f58b4eba1137502b",
         "type": "github"
       },
       "original": {
