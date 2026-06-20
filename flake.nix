@@ -11,10 +11,7 @@
     copyparty.url = "github:9001/copyparty";
     playit.url = "github:pedorich-n/playit-nixos-module";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-    admp = {
-      url = "github:ar-tur-o/admp";
-      flake = false;
-    };
+    admp.url = "github:ar-tur-o/admp";
 
     agenix.url = "github:ryantm/agenix";
 

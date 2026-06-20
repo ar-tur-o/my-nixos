@@ -17,7 +17,11 @@
       enable = true; # redundant, but whatever
       tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
     };
-    minecraft-server.enable = true;
+  };
+  
+  minecraft-admp = {
+    enable = true;
+    packHash = "sha256-fbdbFE52AJnNbCaLU0g+P72oaA/SBG//RgW0OHVbVz0=";
   };
 
   user-profiles = {
