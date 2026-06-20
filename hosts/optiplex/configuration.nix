@@ -21,7 +21,8 @@
   
   minecraft-admp = {
     enable = true;
-    packHash = "sha256-fbdbFE52AJnNbCaLU0g+P72oaA/SBG//RgW0OHVbVz0=";
+    packHash = "sha256-A/1stbe8o3XbhIRkEwmkBS5HBF5Zo3e+hMPMxC7mI8E=";
+    version = "1_1_11s";
   };
 
   user-profiles = {
