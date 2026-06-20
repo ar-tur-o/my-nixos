@@ -17,6 +17,7 @@
     copyparty.enable = true;
     tethering.enable = true;
     vm.enable = true;
+    tailscale.enable = true;
   };
 
   user-profiles = {
