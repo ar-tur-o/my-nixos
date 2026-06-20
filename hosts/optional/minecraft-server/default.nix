@@ -13,8 +13,8 @@
         # Arturo's Diagetic Modpack 1.0
         admp = let
           modpack = pkgs.fetchModrinthModpack {
-            src = "${inputs.admp}/TwoWeeks-1_1_2.mrpack";
-            packHash = "sha256-CtOs76Kn9XGMj0sxL81uu3dyxpikd2E4TC/m7rpPKsc=";
+            src = "${inputs.admp}/TwoWeeks-1_1_6s.mrpack";
+            packHash = "sha256-QjRfWvmeTeGdUgGBzcE+JYLs2SZORr1mvxgDnBqfUjU=";
             side = "server";
           };
         in {
@@ -34,6 +34,7 @@
             view-distance = 8;
             simulation-distance = 4;
             network-compression-threshold = 256;
+            spawn-protection = 0;
             motd = "The one piece is real...";
           };
 
