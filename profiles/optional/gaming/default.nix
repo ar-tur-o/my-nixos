@@ -1,9 +1,12 @@
-{lib, config, pkgs, myLib, ...}:
+{lib, config, pkgs, inputs, host, myLib, ...}:
 let 
   cfg = config.myHome;
   sp = myLib.simplePkgs {inherit lib cfg;} {
     itch = pkgs.itch;
-    minecraft = [pkgs.prismlauncher pkgs.mcpelauncher-ui-qt];
+    minecraft = [
+      (inputs.prismlauncher.packages.${host.system}.prismlauncher.override {
+        controllerSupport = true;
+        gamemodeSupport = true; })];
     moonlight = pkgs.moonlight-qt;
     osu = pkgs.osu-lazer-bin;
     # I don't even use emulators??

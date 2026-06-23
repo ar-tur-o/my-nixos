@@ -63,10 +63,13 @@
 
   # ========== NETWORK ========== #
 
-  networking.hostName = host.name;
-  networking.extraHosts = "10.0.0.213 optiplex";
-  networking.networkmanager.enable = true;
-  networking.wireless.enable = true;
+  networking = {
+    hostName = host.name;
+    extraHosts = "10.0.0.213 optiplex";
+    networkmanager.enable = true;
+    wireless.enable = true;
+    enableIPv6 = false;
+  };
   services.gvfs = {
     enable = true;
     package = pkgs.gnome.gvfs;

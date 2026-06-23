@@ -11,6 +11,7 @@
     copyparty.url = "github:9001/copyparty";
     playit.url = "github:pedorich-n/playit-nixos-module";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     admp = {
       url = "github:ar-tur-o/admp";
       flake = false;
@@ -18,10 +19,7 @@
 
     agenix.url = "github:ryantm/agenix";
 
-    home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager/master";
   };
 
   outputs = {self, ...} @ inputs: let

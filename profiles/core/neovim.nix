@@ -1,7 +1,8 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [inputs.nixvim.homeModules.nixvim];
   programs.nixvim = {
     enable = true;
+    nixpkgs.pkgs = pkgs;
     opts = {
       number = true; # show line numbers?
       shiftwidth = 2; # spaces per indent
