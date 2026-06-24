@@ -5,11 +5,11 @@
         "nix-minecraft": "nix-minecraft"
       },
       "locked": {
-        "lastModified": 1781948661,
-        "narHash": "sha256-Xb6YgCzvw92AjTQ6N3owQi5O+dabe2iUCrecMZrDC4o=",
+        "lastModified": 1782193630,
+        "narHash": "sha256-HFb5Ztj2kmB5pXtIcxKLZwA3V4Jpk6g+yO3MgQl8254=",
         "owner": "ar-tur-o",
         "repo": "admp",
-        "rev": "e982b0ddd1d4da955cfbbfe99faf7877186dc498",
+        "rev": "149e8314c58daeb10b15b4cf897642582eae4fa6",
         "type": "github"
       },
       "original": {
