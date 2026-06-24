@@ -62,10 +62,13 @@
   };
 
   # ========== NETWORK ========== #
-
+  
+  services.resolved.enable = true;
   networking = {
     hostName = host.name;
     extraHosts = "10.0.0.213 optiplex";
+    nameservers = [ "75.75.75.75" "75.75.76.76" "1.1.1.1" ];
+    resolvconf.useLocalResolver = false;
     networkmanager.enable = true;
     wireless.enable = true;
     enableIPv6 = false;
