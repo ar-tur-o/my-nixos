@@ -8,6 +8,7 @@
   imports = [
     ../optional
     ./agenix.nix
+    ./neovim.nix
   ];
 
   nixpkgs.overlays = [inputs.nur.overlays.default];

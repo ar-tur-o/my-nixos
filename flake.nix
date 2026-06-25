@@ -6,8 +6,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     stylix.url = "github:danth/stylix";
     nur.url = "github:nix-community/NUR";
-    nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nvf.url = "github:notashelf/nvf";
     copyparty.url = "github:9001/copyparty";
     playit.url = "github:pedorich-n/playit-nixos-module";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";

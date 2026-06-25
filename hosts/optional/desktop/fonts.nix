@@ -17,6 +17,7 @@ in {
       roboto-slab
       roboto-mono
       google-fonts
+      nerd-fonts.jetbrains-mono
     ];
   };
 }

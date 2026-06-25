@@ -1,7 +1,6 @@
 {
   imports = [
     ./bash.nix
-    ./neovim.nix
     ./git.nix
     ./tmux.nix
     ./browsh.nix
