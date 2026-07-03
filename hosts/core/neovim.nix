@@ -6,8 +6,11 @@
     settings.vim = {
       theme.enable = true;
 
+      extraLuaFiles = [./extra-nvim.lua];
+
       treesitter = {
         enable = true;
+        indent.enable = true;
         autotagHtml = true;
         context.enable = true;
       };
@@ -20,9 +23,10 @@
       };
 
       options = {
-        tabstop = 2;
-        shiftwidth = 2;
+        autoindent = true;
         expandtab = true;
+        shiftwidth = 2;
+        tabstop = 2;
       };
 
       syntaxHighlighting = true;
@@ -47,6 +51,11 @@
         trouble.enable = true;
         # tailwind is a separate setting here for some reason
         presets.tailwindcss-language-server.enable = true;
+      };
+
+      formatter.conform-nvim.setupOpts.format_on_save = {
+        lsp_format = "fallback";  # use the LSP's formatter if no conform formatter matches this filetype
+        timeout_ms = 2000;
       };
 
       languages = {
@@ -74,6 +83,9 @@
 
         # Fun!
         csharp.enable = true;
+        # csharp = {
+        #   format.type = ["csharpier"];
+        # };
       };
     };
   };

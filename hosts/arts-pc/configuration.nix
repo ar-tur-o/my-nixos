@@ -18,6 +18,7 @@
     tethering.enable = true;
     vm.enable = true;
     tailscale.enable = true;
+    lessDistractionDns.enable = true;
   };
 
   user-profiles = {
