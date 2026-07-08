@@ -23,6 +23,7 @@
       };
 
       options = {
+        wrap = false;
         autoindent = true;
         expandtab = true;
         shiftwidth = 2;
@@ -82,10 +83,13 @@
         typescript.enable = true;
 
         # Fun!
-        csharp.enable = true;
-        # csharp = {
-        #   format.type = ["csharpier"];
-        # };
+        csharp = {
+          enable = true;
+          lsp = {
+            enable = true;
+            servers = ["roslyn-ls"];
+          };
+        };
       };
     };
   };

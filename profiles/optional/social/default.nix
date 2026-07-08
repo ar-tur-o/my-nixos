@@ -3,6 +3,7 @@ let
   cfg = config.myHome;
   sp = myLib.simplePkgs {inherit lib cfg;} {
     discord = pkgs.discord;
+    spotify = pkgs.spotify;
   };
 in
 {
