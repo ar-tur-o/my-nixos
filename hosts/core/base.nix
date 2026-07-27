@@ -19,6 +19,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = host.system;
   nixpkgs.config.permittedInsecurePackages = ["electron-39.8.10"]; # end of life reached for this
+  programs.nix-ld.enable = true;
 
   # ========== BOOT ========== #
 
