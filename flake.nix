@@ -8,7 +8,6 @@
     nur.url = "github:nix-community/NUR";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nvf.url = "github:notashelf/nvf";
-    copyparty.url = "github:9001/copyparty";
     playit.url = "github:pedorich-n/playit-nixos-module";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";

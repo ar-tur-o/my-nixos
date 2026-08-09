@@ -14,7 +14,6 @@
     steam.enable = true;
     sunshine.enable = true;
     roblox.enable = true;
-    copyparty.enable = true;
     tethering.enable = true;
     vm.enable = true;
     tailscale.enable = true;
