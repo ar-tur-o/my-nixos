@@ -1,4 +1,2 @@
 TODO:
-- remove copyparty (?) and immich
-  - including secrets and flake inputs
 - update nvf sometime. json format is broken as of now (jun 24, 2026)

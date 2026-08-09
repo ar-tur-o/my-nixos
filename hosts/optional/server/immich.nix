@@ -6,10 +6,13 @@
     services.immich = {
       enable = true;
       mediaLocation = "/srv/immich";
+      host = "0.0.0.0";
       port = 2283;
       openFirewall = true;
       secretsFile = config.age.secrets.immich.path;
     };
+    
+    networking.firewall.allowedTCPPorts = [2283];
 
     myHost.cloudflared = {
       enable = true;
