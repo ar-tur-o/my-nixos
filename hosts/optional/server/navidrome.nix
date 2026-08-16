@@ -1,4 +1,4 @@
-{lib, config, ...}:
+{lib, config, pkgs, ...}:
 {
   options.myHost.navidrome.enable = lib.mkEnableOption "Enables Navidrome";
 
@@ -13,6 +13,11 @@
         Port = 4533;
         Scanner.GroupAlbumReleases = true;
       };
+      plugins = with pkgs.navidromePlugins; [
+        apple-music
+        listenbrainz-daily-playlist
+      ];
+
     };
 
     myHost.cloudflared = {

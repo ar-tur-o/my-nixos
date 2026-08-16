@@ -9,9 +9,7 @@
   ];
 
   myHost = {
-    stylix.enable = false;
     nextcloudServer.enable = true;
-    playit.enable = true;
     tailscale.enable = true;
     navidrome.enable = true;
     immich.enable = true;
@@ -21,8 +19,10 @@
     };
   };
   
+  # Enable these for minecraft server
+  myHost.playit.enable = false;
   minecraft-admp = {
-    enable = true;
+    enable = false; 
     packHash = "sha256-A/1stbe8o3XbhIRkEwmkBS5HBF5Zo3e+hMPMxC7mI8E=";
     version = "1_1_11s";
   };
