@@ -2,7 +2,7 @@
 let 
   cfg = config.myHome;
   sp = myLib.simplePkgs {inherit lib cfg;} {
-    elisa = pkgs.kdePackages.elisa;
+    nocturne = pkgs.nocturne;
     ffmpeg = pkgs.ffmpeg-full;
     kid3 = pkgs.kid3;
     picard = pkgs.picard;

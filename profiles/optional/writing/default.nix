@@ -5,7 +5,7 @@ let
     hunspell = [pkgs.hunspell pkgs.hunspellDicts.en_US pkgs.hunspellDicts.es_MX];
     libreoffice = pkgs.libreoffice;
     obsidian = pkgs.obsidian;
-    anki = pkgs.anki-bin;
+    #anki = pkgs.anki-bin;
   };
 in
 {

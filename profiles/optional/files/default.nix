@@ -3,7 +3,7 @@ let
   cfg = config.myHome;
   sp = myLib.simplePkgs {inherit lib cfg;} {
     bitwarden = pkgs.bitwarden-desktop;
-    insync = pkgs.insync;
+    #insync = pkgs.insync;
     qbittorrent = pkgs.qbittorrent;
     impression = pkgs.impression;
     brasero = pkgs.brasero;

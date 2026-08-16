@@ -4,10 +4,10 @@ let
   sp = myLib.simplePkgs {inherit lib cfg;} {
     blender = pkgs.blender;
     freecad = pkgs.freecad;
-    inkscape = pkgs.inkscape;
+    #inkscape = pkgs.inkscape;
     krita = pkgs.krita;
     orcaSlicer = pkgs.orca-slicer;
-    bespokeSynth = pkgs.bespokesynth-with-vst2;
+    #bespokeSynth = pkgs.bespokesynth-with-vst2;
   };
 in
 {
