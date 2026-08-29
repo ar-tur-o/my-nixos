@@ -7,12 +7,13 @@
       enable = true;
       openFirewall = true;
       settings = {
-        MusicFolder = "/mnt/media/music";
-        PlaylistsPath = "/mnt/media/playlists";
+        MusicFolder = "/srv/media/Music";
+        PlaylistsPath = "/srv/media/Playlists";
         Address = "0.0.0.0";
         Port = 4533;
         Scanner.GroupAlbumReleases = true;
       };
+
       plugins = with pkgs.navidromePlugins; [
         apple-music
         listenbrainz-daily-playlist
