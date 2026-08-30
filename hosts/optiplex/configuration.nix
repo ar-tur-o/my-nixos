@@ -1,4 +1,4 @@
-{profiles, ...}:
+{profiles, pkgs, ...}:
 {
   imports = [
     # Include the results of the hardware scan.
@@ -31,6 +31,19 @@
     enable = true;
     profiles = { inherit (profiles) arturos; };
   };
+
+  users.users.backup-agent = {
+    isSystemUser = true;
+    group = "backup-agent";
+    home = "/home/backup-agent";
+    createHome = true;
+    shell = pkgs.bash;
+
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBMMwnqnb4E8oNrFpAQUsqJKwD07a6NpN7iHhCtjxiJI arturos@arts-pc"
+    ];
+  };
+  users.groups.backup-agent = {};
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
