@@ -1,2 +1,8 @@
 TODO:
 - update nvf sometime. json format is broken as of now (jun 24, 2026)
+- clean up spagetti for rsync (I just wrote it directly onto the host config)
+  - turn it into a module
+- encrypt the rsync ssh key using agenix
+- migrate optiplex to ext (64gb) + zfs (only one pool tho, I don't have two disks)
+- module that creates a zfs scrubbing service that runs automatically
+- 
