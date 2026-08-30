@@ -1,11 +1,21 @@
-{pkgs, profiles, ...}: {
+{pkgs, profiles, inputs, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
     # Import the core desktop boilerplate
     ../core/desktop.nix
+
+    # This is less of a toggle and more of a structural decision
+    inputs.disko.nixosModules.disko
+    ./disko-server-backup.nix
+    ./server-backup-service.nix
   ];
+
+  networking.hostId = "775bb68a"; # ZFS needs a uid for the machine.
+  boot.supportedFilesystems = ["zfs"];
+  boot.zfs.forceImportRoot = false;
+  fileSystems."/mnt/server-backup".options = ["nofail"];
 
   myHost = {
     gnome.enable = true;

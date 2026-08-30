@@ -14,6 +14,7 @@
     admp.url = "github:ar-tur-o/admp";
     agenix.url = "github:ryantm/agenix";
 
+    disko.url = "github:nix-community/disko";
     home-manager.url = "github:nix-community/home-manager/master";
   };
 

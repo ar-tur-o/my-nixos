@@ -10,10 +10,10 @@ let
   };
 
   in {
-  # example
   "nextcloud-admin.age".publicKeys = [optiplex.pub];
   "cloudflare-tunnel.age".publicKeys = [optiplex.pub];
   "immich.age".publicKeys = [optiplex.pub];
   "playit.age".publicKeys = [optiplex.pub];
   "tailscale.age".publicKeys = [optiplex.pub arts-pc.pub];
+  "server-rsync.age".publicKeys = [arts-pc.pub];
 }
