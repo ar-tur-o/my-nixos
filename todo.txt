@@ -5,4 +5,4 @@ TODO:
 - encrypt the rsync ssh key using agenix
 - migrate optiplex to ext (64gb) + zfs (only one pool tho, I don't have two disks)
 - module that creates a zfs scrubbing service that runs automatically
-- 
+- add a notification service for stuff happening on the server (zpool scrubbing, sudden power loss, network disconnect)
