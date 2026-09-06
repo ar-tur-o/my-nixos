@@ -13,19 +13,11 @@
         Port = 4533;
         Scanner.GroupAlbumReleases = true;
       };
-
-      plugins = with pkgs.navidromePlugins; [
-        apple-music
-        listenbrainz-daily-playlist
-      ];
-
     };
 
     myHost.cloudflared = {
       enable = true;
       ingress = {"music.computer-day.com" = "http://localhost:4533";};
     };
-
-    users.users.navidrome.extraGroups = ["media"];
   };
 }
