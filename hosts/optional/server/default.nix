@@ -6,5 +6,6 @@
     ./playit.nix
     ./navidrome.nix
     ./media-group.nix
+    ./slskd.nix
   ];
 }

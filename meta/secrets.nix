@@ -7,4 +7,5 @@ self: {
   immich = {};
   playit = {};
   tailscale = {};
+  slsk = {};
 }

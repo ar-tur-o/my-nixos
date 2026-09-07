@@ -13,6 +13,7 @@
     tailscale.enable = true;
     navidrome.enable = true;
     immich.enable = true;
+    slskd.enable = true;
     cloudflared = {
       enable = true; # redundant, but whatever
       tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
@@ -31,6 +32,26 @@
     enable = true;
     profiles = { inherit (profiles) arturos; };
   };
+  
+  networking.firewall.interfaces.wg0.allowedTCPPorts = [50300];
+  environment.systemPackages = [pkgs.wireguard-tools];
+  networking.wg-quick.interfaces.wg0 = {
+    address = ["10.77.0.2/24"];
+
+    privateKeyFile = "/etc/wireguard/home-private.key";
+
+    peers = [
+      {
+        publicKey = "BO/Vo95bigDACcfTdLBuA1EDo7CXykbsNkfQ/RwOQzE="; # vps public key here
+        allowedIPs = [
+          "10.77.0.0/24"
+          "208.76.170.59/32"
+        ];
+        endpoint = "107.174.127.234:51820";
+        persistentKeepalive = 25;
+      }
+    ];
+  };
 
   users.users.backup-agent = {
     isSystemUser = true;
@@ -43,6 +64,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBMMwnqnb4E8oNrFpAQUsqJKwD07a6NpN7iHhCtjxiJI arturos@arts-pc"
     ];
   };
+
   users.groups.backup-agent = {};
 
   # This value determines the NixOS release from which the default

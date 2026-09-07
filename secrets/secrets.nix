@@ -16,4 +16,5 @@ let
   "playit.age".publicKeys = [optiplex.pub];
   "tailscale.age".publicKeys = [optiplex.pub arts-pc.pub];
   "server-rsync.age".publicKeys = [arts-pc.pub];
+  "slsk.age".publicKeys = [optiplex.pub];
 }
