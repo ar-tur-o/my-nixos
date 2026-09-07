@@ -7,3 +7,4 @@ TODO:
 - module that creates a zfs scrubbing service that runs automatically
 - add a notification service for stuff happening on the server (zpool scrubbing, sudden power loss, network disconnect)
 - clean spagetti for slskd, including the wireguard tunnel
+  - Pretty sure wireguars secrets are stored somewhere in /var, might want to add to agenix
