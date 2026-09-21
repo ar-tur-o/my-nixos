@@ -19,7 +19,7 @@
       https = false;
       database.createLocally = true;
       configureRedis = true;
-      package = pkgs.nextcloud33;
+      package = pkgs.nextcloud34;
       hostName = "nextcloud.computer-day.com";
       datadir = "/srv/nextcloud";
       settings = {
