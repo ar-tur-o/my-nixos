@@ -1,11 +1,4 @@
 TODO:
-- REMOVE THE "Simple Packages" HELPER
-  - The organization adds unecessary complexity in the profiles/optional dir
-  - All the bundle defs can be defined in profiles/optional/default.nix (with a few exceptions like firefox)
-  - Not every app needs a toggle
-  - Not every catagory needs a folder (flatten it all into profiles/optional ... KISS)
-
-
 - update nvf sometime. json format is broken as of now (jun 24, 2026)
 - clean up spagetti for rsync (I just wrote it directly onto the host config)
   - turn it into a module

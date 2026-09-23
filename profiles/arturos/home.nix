@@ -1,18 +1,19 @@
-{
+{lib, host, ...}: {
   imports = [
-    # import programs here
     ../core
   ];
 
-  myHome = {
-    bundles = {
-      browsers.enable = true;
-      creative.enable = true;
-      files.enable = true;
-      # games and gamedev are excluded by default
-      media.enable = true;
-      social.enable = true;
-      writing.enable = true;
-    };
-  };
+  myHome = if host.isGraphical then {
+    firefox.enable = lib.mkDefault true;
+
+    # Media (minus kid3)
+    gelly.enable = lib.mkDefault true;
+    ffmpeg.enable = lib.mkDefault true;
+    vlc.enable = lib.mkDefault true;
+
+    # Writing
+    hunspell.enable = lib.mkDefault true;
+    libreOffice.enable = lib.mkDefault true; # replace this shit
+    obsidian.enable = lib.mkDefault true;
+  } else {};
 }

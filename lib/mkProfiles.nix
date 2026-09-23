@@ -2,7 +2,6 @@
   inputs,
   self,
   lib,
-  myLib,
   host,
   config,
   pkgs,
@@ -47,7 +46,7 @@
     home-manager = {
       backupFileExtension = "backup";
       extraSpecialArgs = {
-        inherit inputs host myLib;
+        inherit inputs host;
       };
       useGlobalPkgs = true;
       useUserPackages = true;
