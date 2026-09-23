@@ -37,6 +37,7 @@
     # Writing
     hunspell = [pkgs.hunspell pkgs.hunspellDicts.en_US pkgs.hunspellDicts.es_MX];
     libreOffice = pkgs.libreoffice; # replace this w/ something better
+    openOffice = pkgs.onlyoffice-desktopeditors;
     obsidian = pkgs.obsidian;
   };
 

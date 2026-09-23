@@ -13,7 +13,7 @@
 
     # Writing
     hunspell.enable = lib.mkDefault true;
-    libreOffice.enable = lib.mkDefault true; # replace this shit
+    openOffice.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault true;
   } else {};
 }
