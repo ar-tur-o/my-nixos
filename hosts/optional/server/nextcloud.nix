@@ -30,7 +30,6 @@
         trusted_proxies = ["127.0.0.1"];
       };
       config = {
-        adminpassFile = config.age.secrets.nextcloud-admin.path;
         dbtype = "pgsql";
         dbname = "nextcloud";
         dbuser = "nextcloud";
