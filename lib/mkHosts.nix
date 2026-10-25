@@ -8,9 +8,6 @@ inputs.nixpkgs.lib.nixosSystem {
     inherit inputs self;
     host = host // {name = hostName;};
     profiles = import ../meta/profiles.nix;
-    myLib = {
-      simplePkgs = import ./simplePkgs.nix;
-    };
   };
   modules = [
     "${self}/hosts/${hostName}/configuration.nix"

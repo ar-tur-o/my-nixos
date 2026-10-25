@@ -1,4 +1,4 @@
-{profiles, ...}:
+{profiles, inputs, ...}:
 {
   imports = [
     # Include the results of the hardware scan.
@@ -6,15 +6,14 @@
 
     # Include the PC archetype and desktop environment
     ../core/desktop.nix
+    
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480s
   ];
 
   myHost = {
     gnome.enable = true;
     stylix.enable = true;
-    cdBurningWrapper.enable = true;
     tethering.enable = true;
-    vm.enable = true;
-    wine.enable = true;
 
     lessDistractionDns.enable = true;
   };
