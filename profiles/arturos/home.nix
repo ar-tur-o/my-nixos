@@ -7,7 +7,7 @@
     firefox.enable = lib.mkDefault true;
 
     # Media (minus kid3)
-    gelly.enable = lib.mkDefault true;
+    feishin.enable = lib.mkDefault true;
     ffmpeg.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
 

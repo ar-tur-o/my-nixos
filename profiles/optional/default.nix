@@ -27,6 +27,7 @@
 
     # Media
     gelly = pkgs.gelly;
+    feishin = pkgs.feishin;
     ffmpeg = pkgs.ffmpeg-full;
     kid3 = pkgs.kid3;
     vlc = pkgs.vlc;
