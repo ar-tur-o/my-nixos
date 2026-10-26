@@ -9,6 +9,8 @@
       settings = {
         MusicFolder = "/srv/media/Music";
         PlaylistsPath = "/srv/media/Playlists";
+        #Plugins.Folder = lib.mkForce "/var/lib/navidrome/plugins";
+        Plugins.Enabled = false;
         Address = "0.0.0.0";
         Port = 4533;
         Scanner.GroupAlbumReleases = true;
