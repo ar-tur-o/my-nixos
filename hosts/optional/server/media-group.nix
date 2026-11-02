@@ -3,8 +3,11 @@
 
   systemd.tmpfiles.rules = [
     "d /srv/media 2775 root media -"
+
     "d /srv/media/Music 2775 root media -"
     "d /srv/media/Playlists 2775 root media -"
     "d /srv/media/Books 2775 root media -"
+    "d /srv/media/Movies 2775 root media - -"
+    "d /srv/media/Shows 2775 root media - -"
   ];
 }

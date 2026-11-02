@@ -18,6 +18,7 @@
       enable = true; # redundant, but whatever
       tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
     };
+    jellyfin.enable = true;
   };
   
   # Enable these for minecraft server
@@ -32,6 +33,9 @@
     enable = true;
     profiles = { inherit (profiles) arturos; };
   };
+
+  boot.supportedFilesystems = [ "zfs" ];
+  networking.hostId = "745dc284";
   
   networking.firewall.interfaces.wg0.allowedTCPPorts = [50300];
   environment.systemPackages = [pkgs.wireguard-tools];

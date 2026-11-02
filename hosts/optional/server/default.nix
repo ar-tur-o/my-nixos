@@ -7,5 +7,6 @@
     ./navidrome.nix
     ./media-group.nix
     ./slskd.nix
+    ./jellyfin.nix
   ];
 }

@@ -13,6 +13,11 @@
       };
     };
 
+    systemd.services.slskd = {
+      after = ["wg-quick-wg0.service"];
+      requires = ["wg-quick-wg0.service"];
+    };
+
     networking.firewall.allowedTCPPorts = [5030];
 
     myHost.cloudflared = {
