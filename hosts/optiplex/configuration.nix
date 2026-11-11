@@ -19,6 +19,7 @@
       tunnelId = "656d5403-a187-42a7-a57e-f2ec3e7cfd39";
     };
     jellyfin.enable = true;
+    kavita.enable = true;
   };
   
   # Enable these for minecraft server

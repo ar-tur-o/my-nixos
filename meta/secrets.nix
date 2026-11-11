@@ -18,4 +18,5 @@ in {
   tailscale.owners = {inherit (hosts) optiplex arts-pc;};
   server-rsync.owners = {inherit (hosts) arts-pc;};
   slsk.owners = {inherit (hosts) optiplex;};
+  kavita.owners = {inherit (hosts) optiplex;};
 }

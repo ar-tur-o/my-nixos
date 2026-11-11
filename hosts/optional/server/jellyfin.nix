@@ -16,6 +16,11 @@
       ];
     };
 
-    users.users.jellyfin.extraGroups = ["media"];
+    # turns out, I can just manage this on the cloudflare dashboard!!!!
+    # Who woulda thunk?!???!?
+    myHost.cloudflared = {
+      enable = true;
+      ingress = {"tv.computer-day.com" = "http://localhost:8096";};
+    };
   };
 }

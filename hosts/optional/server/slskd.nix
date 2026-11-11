@@ -13,10 +13,14 @@
       };
     };
 
+    # Wait up for the wireguard VPN
     systemd.services.slskd = {
       after = ["wg-quick-wg0.service"];
       requires = ["wg-quick-wg0.service"];
     };
+
+    # slskd needs permission to write to it's var folder
+    systemd.services.slskd.environment.HOME = "/var/lib/slskd";
 
     networking.firewall.allowedTCPPorts = [5030];
 

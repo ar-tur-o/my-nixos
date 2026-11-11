@@ -8,5 +8,6 @@
     ./media-group.nix
     ./slskd.nix
     ./jellyfin.nix
+    ./kavita.nix
   ];
 }
